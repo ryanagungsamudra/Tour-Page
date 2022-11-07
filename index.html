@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RYAN - TOUR</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body class="bg-dark">
+    <!-- Nav Section Start --> 
+    <!-- sticky-top untuk membuat navbar stick di top namun tidak fix (maksudnya ketika tab navbar diexpand akan mempengaruhi komponen dibawahnya) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-light sticky-top">
+        <div class="container-fluid">
+          <a class="navbar-brand">VIRTUAL TOUR</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <!-- active bertujuan untuk menambahkan fitur penanda navigasi yang aktif -->
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/paket">Paket</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Others
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/contact">Contact</a></li>
+                  <li><a class="dropdown-item" href="/promo">Promo</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-light" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+    <!-- Nav Secttion End -->
+
+    <!-- first layout start -->
+    <!-- container-fluid untuk mengedit layout pada web sehingga mempunyai 12 kolom. Dan kemudian untuk membuat layout full kebawah menggunakan style: 100%; -->
+    <div class="container-fluid text-light" style="height: 100vh;"> 
+
+      <!-- Carousel Images -->
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <a href="http://virtualtourftm.epizy.com/" target="_blank"><img src="assets/carousel1.jpg" class="d-block w-100 img-fluid rounded-start" alt="..." style="height: 500px;"></a>
+            <!-- Menghapus (d-none d-md-block) pada <div class="carousel-caption d-none d-md-block"> bertujuan agar tidak mempengaruhi tampilan dari carousel-caption ketika dibuka pada view <768px -->
+            <div class="carousel-caption">
+              <h5>Virtual Tour Fakultas Teknologi Mineral</h5>
+              <p>Some representative placeholder content for the first slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="assets/carousel2.jpg" class="d-block w-100 img-fluid rounded-start" alt="..." style="height: 500px;">
+            <div class="carousel-caption">
+              <h5>Second slide label</h5>
+              <p>Some representative placeholder content for the second slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="assets/carousel3.jpg" class="d-block w-100 img-fluid rounded-start" alt="..." style="height: 500px;">
+            <div class="carousel-caption">
+              <h5>Third slide label</h5>
+              <p>Some representative placeholder content for the third slide.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- End of Carousel Images -->
+      <!-- mt-4 untuk menambahkan margin top -->
+      <div class="row text-center align-items-center mt-4">
+        <div class="col-12">
+          <img src="/assets/profil.png" alt="tech" width="150px" height="150px">
+            <h2>Ryan Agung Samudra</h2>
+            <p>Berpengalaman membuat <span style="font-style: italic;">virtual tour</span> lebih dari <span style="color: yellow;">100+</span> <span style="font-style: italic;">customer</span></p>
+          </div>
+        </div>
+        <!-- Card components start -->
+        <!-- untuk col harus berjumlah total 12 untuk satu view horizontal. Sementara untuk menambahkan gap antar card dengan menambahkan g-4 -->
+        <div class="row text-dark mt-4">
+          <div class="col-sm-4 g-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title text-center">Tour Bersama Saya</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <!-- Tambahkan (btn-dark d-block) untuk membuat button berwarna gelap dan ditengah serta full kiri-kanan bg color -->
+                <a href="/contact" class="btn btn-dark d-block">Hubungi Sekarang</a>
+              </div>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">
+                $74.9
+              </span>
+            </div>
+          </div>
+          <div class="col-sm-4 g-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title text-center">Paket Tour Terbaik</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="/paket" class="btn btn-dark d-block">Biaya Paket</a>
+              </div>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">
+                $99.9
+              </span>
+            </div>
+          </div>
+          <div class="col-sm-4 g-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title text-center">Promo Spesial</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="/promo" class="btn btn-dark d-block">Lihat Detail</a>
+              </div>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">
+                $49.9
+              </span>
+            </div>
+          </div>
+        </div>
+        <!-- Card components End -->
+
+    </div>
+    <!-- first layout start -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>
